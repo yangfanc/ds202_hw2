@@ -80,29 +80,22 @@ print(numPerfect)
 
 
 
-
-
-
-
 Cars and mileage
 
 ```{r}
-install.packages('ggplot2')
+library(dplyr)
 library(ggplot2)
-
+data <- mpg %>%
+  group_by(year) %>%
+  summarise(averageMPG = mean(hwy))
+data
 ```
 
 
 
 
-1.
 ```{r}
-mpg
-```
-
-
-```{r}
-?mpg
+??mpg
 ```
 
 
